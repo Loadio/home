@@ -19,8 +19,7 @@ setTimeout(() => clearInterval(interval),  tool + '00')//desativa loop temporari
 
 //Search
 var searchLTF = true
-document.querySelector('.plus-menu-itens a').addEventListener //OPEN SEARCH PAINEL
-('click', function(){
+document.querySelector('.plus-menu-itens a').addEventListener('click', function(){ //OPEN SEARCH PAINEL
     if (searchLTF) {
         document.querySelector('.logo-footer_56497 a').click() //click footer img
         setTimeout( function(){
@@ -35,8 +34,7 @@ document.querySelector('.plus-menu-itens a').addEventListener //OPEN SEARCH PAIN
         searchLTF = false;
     },100)
     }})
-document.querySelector('.header-search-painel div').addEventListener //CLOSE SEARCH PAINEL
-('click', function(){
+document.querySelector('.header-search-painel div').addEventListener('click', function(){ //CLOSE SEARCH PAINEL
     if (searchLTF !== true) {
         document.querySelector('.search-menu').style.cssText= " "
         document.querySelector('.plus-menu-itens').style.cssText = " "
@@ -105,9 +103,6 @@ let mbarrow = document.querySelector('.icon-dropdown');
 } else {
   /*Não é celular*/
    }
-//Quando for clicado em um item do menu mobile
-$('.itens-menu a').addEventListener('click', click(".menu-phone_13670"))
-
 //Criar div para discord incon parceria
 if (!$('.discord-icon').html()){
     $('<div class="discord-icon"><i class="fa-brands fa-discord"></i></div>').appendTo('.Ldhome_Parceria-element_23926 .discord')
@@ -116,4 +111,8 @@ $('.button-form button-main').addEventListener("click" ,function(){
 $('.form-element input').val("")
 $('.form-element textarea').val("")
 })
+
+//Quando for clicado em um item do menu mobile
+$('.itens-menu a').addEventListener('click', click(".menu-phone_13670"))
+
 
