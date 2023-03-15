@@ -113,6 +113,6 @@ $('.form-element textarea').val("")
 })
 
 //Quando for clicado em um item do menu mobile
-$('.itens-menu a').addEventListener('click', click(".menu-phone_13670"))
+$('.itens-menu a').addEventListener('click', $('.menu-phone_13670').click())
 
 
