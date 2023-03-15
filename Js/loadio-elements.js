@@ -1,8 +1,8 @@
 //Elementos da pagina da loadio principal//
 
 //Nome ferramenta e do site para nome projeto
-var tool_name = location.pathname.split(/(\\|\/)/g).pop().split('.html')
-document.title = tool_name[0].replaceAll('-',' ') + " | Loadio";
+//var tool_name = location.pathname.split(/(\\|\/)/g).pop().split('.html')
+document.title = document.title + " | Loadio";
 $("head title").text(function(i, text) { //Colocar primeira letra como maiuscula do title head
   return text.substr(0,1).toUpperCase() + text.substr(1);
 });
