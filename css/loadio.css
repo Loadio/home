@@ -1,26 +1,26 @@
 @font-face {
   font-family: Loadio-Bold;
-  src: url(http://127.0.0.1:5500/Fonts/Cadet-Bold.woff);
+  src: url(https://loadio.github.io/home/Fonts/Cadet-Bold.woff);
 }
 @font-face {
   font-family: Loadio-Thin;
-  src: url(http://127.0.0.1:5500/Fonts/Cadet-Thin.woff2);
+  src: url(https://loadio.github.io/home/Fonts/Cadet-Thin.woff2);
 }
 @font-face {
   font-family: Loadio-Regular;
-  src: url(http://127.0.0.1:5500/Fonts/Cadet-Regular.woff2);
+  src: url(https://loadio.github.io/home/Fonts/Cadet-Regular.woff2);
 }
 @font-face {
   font-family: Loadio-Medium;
-  src: url(http://127.0.0.1:5500/Fonts/Cadet-Medium.otf);
+  src: url(https://loadio.github.io/home/Fonts/Cadet-Medium.otf);
 }
 @font-face {
   font-family: Loadio-Black;
-  src: url(http://127.0.0.1:5500/Fonts/Cadet-Black.otf);
+  src: url(https://loadio.github.io/home/Fonts/Cadet-Black.otf);
 }
 @font-face {
   font-family: Loadio-Light;
-  src: url(http://127.0.0.1:5500/Fonts/Cadet-Light.otf);
+  src: url(https://loadio.github.io/home/Fonts/Cadet-Light.otf);
 }
 
 html {
