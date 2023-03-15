@@ -1,12 +1,5 @@
 //Elementos da pagina da loadio principal//
 
-//Nome ferramenta e do site para nome projeto
-var tool_name = location.pathname.split(/(\\|\/)/g).pop().split('.html')
-document.title = tool_name[0].replaceAll('-',' ') + " | Loadio";
-$("head title").text(function(i, text) { //Colocar primeira letra como maiuscula do title head
-  return text.substr(0,1).toUpperCase() + text.substr(1);
-});
-
   //Sem suporte resolução
 if ($(window).width() < 310) {
   document.body.innerHTML = '<style>body{background:white;}.Ld_loading div{background-color:black;}}</style><div style="width: 100%;height: 100%;display: flex;justify-content: center;align-items: center;position: absolute;flex-direction: column;"><p style="font-weight:600;padding: 10px;text-align: center;">A Loadio não suporta esta resolução, por favor aumente a resolução do seu aparelho, e recarrege a página!!</p><div class="Ld_loading"><div></div><div></div><div></div></div></div>';
