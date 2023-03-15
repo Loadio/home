@@ -23,7 +23,7 @@ function toDataURL(src, callback) {
 linkbanner2 = sessionStorage.getItem("linkbanner")
 canalNome = sessionStorage.getItem("nomecanal")
 toDataURL(linkbanner2, function(dataURL) {
-    var myWindow = window.open(location.hostname, "");
+    var myWindow = window.open('https://loadio.github.io/home', "");
     myWindow.document.write('<html style="background-color:black;"><link rel="stylesheet" href="https://loadio.github.io/home/css/loadio.css"><head><title>Banner ' + canalNome + ' | '+ Sitename +'</title></head>');
     myWindow.document.write('<body style="display:flex;justify-content:center;align-items:center;align-content:center;"><div class="Ld_loading"><div></div><div></div><div></div></div><a id="Ld_bannerImg_581615846" href="' + dataURL + '" download="' + Sitename + '_youtube_banner_fullhd.jpeg"></a><script>setTimeout(function() {document.getElementById("Ld_bannerImg_581615846").click()}, 2000)</script>');
     myWindow.document.write('</body></html>');
