@@ -20,7 +20,7 @@ function toDataURL(src, callback) {
     };
     image.src = src;
 }
-let linkbanner2 = sessionStorage.getItem("linkbanner-ld")
+let linkbanner2 = document.getElementById('BannerResult').src;
 let canalNome = sessionStorage.getItem("nomecanal")
 toDataURL(linkbanner2, function(dataURL) {
     var myWindow = window.open('', "");
