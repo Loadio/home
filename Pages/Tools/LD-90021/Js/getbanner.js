@@ -20,8 +20,8 @@ function toDataURL(src, callback) {
     };
     image.src = src;
 }
-linkbanner2 = sessionStorage.getItem("linkbanner")
-canalNome = sessionStorage.getItem("nomecanal")
+let linkbanner2 = sessionStorage.getItem("linkbanner-ld")
+let canalNome = sessionStorage.getItem("nomecanal")
 toDataURL(linkbanner2, function(dataURL) {
     var myWindow = window.open('', "");
     myWindow.document.write('<html style="background-color:black;"><link rel="stylesheet" href="https://loadio.github.io/home/css/loadio.css"><head><title>Banner ' + sessionStorage.getItem('nomecanal') + ' | '+ Sitename +'</title></head>');
