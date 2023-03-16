@@ -53,9 +53,9 @@ if (valorinput.includes("https://www.youtube.com/@")) {
 function putBannerLink_handle() {
   console.log("Identificador!!!")
   var handlechannel = document.getElementById('SearchBanner').value;
-  var idcanal = handlechannel.replace('https://www.youtube.com/','')
+  var idcanal2 = handlechannel.replace('https://www.youtube.com/','')
   //Coleta o id do canal pelo '@Atm' Identificador
-  $.getJSON("https://yt.lemnoslife.com/channels?handle="+ idcanal +"&type=channel&key=AIzaSyBd1BCa2WQyAtEsC5wPAqETsJF8XbHvmxo", (data) => {
+  $.getJSON("https://yt.lemnoslife.com/channels?handle="+ idcanal2 +"&type=channel&key=AIzaSyBd1BCa2WQyAtEsC5wPAqETsJF8XbHvmxo", (data) => {
     const idcanal_get = data.items
     .map((idcanal) => `${idcanal.id}`)
     .join("");
@@ -75,9 +75,9 @@ function putBannerLink_handle() {
 //ID do canal --- Procura o id do canal
 function putBannerLink_id() {
 var idcanal_valueinput = document.getElementById('SearchBanner').value;
-var idcanal = idcanal_valueinput.replace('https://www.youtube.com/channel/','')
-sessionStorage.setItem("idcanal", idcanal)
-document.getElementById('ID').innerText = idcanal
+var idcanal2 = idcanal_valueinput.replace('https://www.youtube.com/channel/','')
+sessionStorage.setItem("idcanal", idcanal2)
+document.getElementById('ID').innerText = idcanal2
 searchidchannel()
 }
 //Procurar o ID do canal informado no imput de pesquisa
@@ -86,8 +86,8 @@ function searchidchannel(){
  sessionStorage.setItem('etp1',true)
  checkept()
  $('.Error-cusntom').remove();//Remover custom error
-var idcanal = sessionStorage.getItem("idcanal")
-$.getJSON("https://www.googleapis.com/youtube/v3/channels?part=brandingSettings&id="+ idcanal +"&key=AIzaSyBd1BCa2WQyAtEsC5wPAqETsJF8XbHvmxo", (data) => {
+var idcanall = sessionStorage.getItem("idcanal")
+$.getJSON("https://www.googleapis.com/youtube/v3/channels?part=brandingSettings&id="+ idcanall +"&key=AIzaSyBd1BCa2WQyAtEsC5wPAqETsJF8XbHvmxo", (data) => {
   const bannerlink_get = data.items
   .map((bannerlink) => `${bannerlink.brandingSettings.image.bannerExternalUrl}`)
   .join("");
