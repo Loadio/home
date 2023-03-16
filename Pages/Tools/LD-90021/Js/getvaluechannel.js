@@ -107,7 +107,6 @@ $.getJSON("https://www.googleapis.com/youtube/v3/channels?part=brandingSettings&
   document.getElementById('LINK').href = idcanal_valueinput
   document.getElementById('LINK').setAttribute('target', '_blank')
   sessionStorage.setItem('etp2',true);
-  sessionStorage.setItem("linkbanner-ld", document.getElementById('BannerResult').src);
 })
 }
 
