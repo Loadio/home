@@ -101,13 +101,13 @@ $.getJSON("https://www.googleapis.com/youtube/v3/channels?part=brandingSettings&
   sessionStorage.setItem("nomecanal", nomecanal) //Gardar o nome do canal
   var linkbanner_resultado = bannerlink + "=w1138-fcrop64=1,00005a57ffffa5a8-k-c0xffffffff-no-nd-rj"
   document.getElementById('BannerResult').src = linkbanner_resultado;
-  sessionStorage.setItem("linkbanner-ld", document.getElementById('BannerResult').src);
   //Colocar link do canal nas info ao lado do banner
   var idcanal_valueinput = document.getElementById('SearchBanner').value
   document.getElementById('LINK').innerText = idcanal_valueinput
   document.getElementById('LINK').href = idcanal_valueinput
   document.getElementById('LINK').setAttribute('target', '_blank')
   sessionStorage.setItem('etp2',true);
+  sessionStorage.setItem("linkbanner-ld", document.getElementById('BannerResult').src);
 })
 }
 
