@@ -11,7 +11,7 @@ $("head title").text(function(i, text) { //Colocar primeira letra como maiuscula
 if ($(window).width() < 310) {
   document.body.innerHTML = '<style>body{background:white;}.Ld_loading div{background-color:black;}}</style><div style="width: 100%;height: 100%;display: flex;justify-content: center;align-items: center;position: absolute;flex-direction: column;"><p style="font-weight:600;padding: 10px;text-align: center;">A Loadio não suporta esta resolução, por favor aumente a resolução do seu aparelho, e recarrege a página!!</p><div class="Ld_loading"><div></div><div></div><div></div></div></div>';
 }
-
+/*
 //Import elements
 var shortcut_icon_export = localStorage.getItem('shortcut-icon')
 $('<link rel="shortcut icon" href="'+shortcut_icon_export+'" type="image/x-icon">').appendTo("head");
@@ -21,7 +21,7 @@ var footer_export = localStorage.getItem('footer-ld')
 $("#loadio-footer-element-export").html(footer_export); //Import footer
 var loading_dots_animation = localStorage.getItem('loading_dots_animation_loadio')
 $('#preloader .loader').html(loading_dots_animation)
-
+*/
 //Verifica se tem um erro nas 'etp' e Criar elemento (Error cunstom)
 function checkept(){
     setTimeout( function (){
