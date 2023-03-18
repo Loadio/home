@@ -6,10 +6,6 @@ var canalNome;
 var linkbanner2;
 
 function downloadbutton() {
-const interval = setInterval(() => { //Ativa loop temporario
-var linkbanner2 = document.getElementById('BannerResult').src;
-},100)
-setTimeout(() => clearInterval(interval), 1000)//desativa loop temporario
 function toDataURL(src, callback) {
     var image = new Image();
     image.crossOrigin = 'Anonymous';
@@ -24,7 +20,7 @@ function toDataURL(src, callback) {
     };
     image.src = src;
 }
-console.log(sessionStorage.getItem("linkbanneryt"))
+let  linkbanner2 = sessionStorage.getItem("linkbanner")
 let canalNome = sessionStorage.getItem("nomecanal")
 toDataURL(linkbanner2, function(dataURL) {
     var myWindow = window.open("", "");
