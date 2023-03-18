@@ -3,7 +3,7 @@
 if ($(window).width() < 310) {
     document.body.innerHTML = '<style>body{background:white;}.Ld_loading div{background-color:black;}}</style><div style="width: 100%;height: 100%;display: flex;justify-content: center;align-items: center;position: absolute;flex-direction: column;"><p style="font-weight:600;padding: 10px;text-align: center;">A Loadio não suporta esta resolução, por favor aumente a resolução do seu aparelho, e recarrege a página!!</p><div class="Ld_loading"><div></div><div></div><div></div></div></div>';
  }
-
+/*
 //Duplicador toos area auto
 window.addEventListener("load", function() {
 let tool = 0 //Aquantidade de ferramentas
@@ -101,7 +101,7 @@ let mbarrow = document.querySelector('.icon-dropdown');
  }
 )
 } else {
-  /*Não é celular*/
+  Não é celular
    }
 //Criar div para discord incon parceria
 if (!$('.discord-icon').html()){
@@ -114,5 +114,5 @@ $('.form-element textarea').val("")
 
 //Quando for clicado em um item do menu mobile
 $('.itens-menu a').addEventListener('click', $('.menu-phone_13670').click())
-
+*/
 
