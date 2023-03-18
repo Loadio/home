@@ -13,7 +13,7 @@ A place where you gather several internet tools in one place, helping your produ
 To improve and create the site and new tools, it is necessary to pay the cost of domain and tool creations.
 If you want to help this project, make a donation of any amount, to make this project get off the ground, or spread the site to more people.
 
-[Make your donation here!](https://loadio.wixsite.com/home#SITE_FOOTER)
+[Make your donation here!](https://apoia.se/loadio)
 
 ### Multiple tools for you to use!​​ ✨
 No more wasting time researching and looking for a tool on the internet, at Loadio you will find the tool much faster, and with more security!
