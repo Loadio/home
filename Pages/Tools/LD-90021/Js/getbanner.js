@@ -30,4 +30,4 @@ toDataURL(linkbanner2, function(dataURL) {
     setTimeout(function() {
         myWindow.close()
     }, 2000)
-})}}
+})}
