@@ -1,4 +1,4 @@
-
+var Sitename = "Loadio"
 //Download buttom
 function downloadbutton() {
 let  linkbanner2 = sessionStorage.getItem("linkbanner")
