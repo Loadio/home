@@ -40,7 +40,7 @@ setTimeout(function(){
 document.getElementById('content').style.cssText = 'display:flex;height:250px;margin-bottom:0px;'
 document.getElementById('preloader').style.cssText = 'display:flex;height:20%;'
 },600)
-//Checa se é ID ou Identificador(@Atm)
+//Checa se é ID ou Identificador(Atm)
 let valorinput = document.getElementById('SearchBanner')
 valorinput = valorinput.value.replace('','')
 if (valorinput.includes("https://www.youtube.com/@")) {
@@ -49,12 +49,11 @@ if (valorinput.includes("https://www.youtube.com/@")) {
   putBannerLink_id()
 }
 }
-//Identificador: @Atm, irá pegar o id do canal --- Procura o identificador do canal e trocará para o id do canal
+//Identificador: Atm, irá pegar o id do canal --- Procura o identificador do canal e trocará para o id do canal
 function putBannerLink_handle() {
-  console.log("Identificador!!!")
   var handlechannel = document.getElementById('SearchBanner').value;
   var idcanal = handlechannel.replace('https://www.youtube.com/','')
-  //Coleta o id do canal pelo '@Atm' Identificador
+  //Coleta o id do canal pelo 'Atm' Identificador
   $.getJSON("https://yt.lemnoslife.com/channels?handle="+ idcanal +"&type=channel&key=AIzaSyBd1BCa2WQyAtEsC5wPAqETsJF8XbHvmxo", (data) => {
     const idcanal_get = data.items
     .map((idcanal) => `${idcanal.id}`)
@@ -99,16 +98,16 @@ $.getJSON("https://www.googleapis.com/youtube/v3/channels?part=brandingSettings&
   const nomecanal_out = $("<ul />").html(nomedocanal_get); //Coletar o nome do canal
   var nomecanal = nomecanal_out.html()
   sessionStorage.setItem("nomecanal", nomecanal) //Gardar o nome do canal
-  var linkbanner_resultado = bannerlink + "=w1138-fcrop64=1,00005a57ffffa5a8-k-c0xffffffff-no-nd-rj"
-  document.getElementById('BannerResult').src = linkbanner_resultado;
+  var linkbanner_ = bannerlink + "=w1138-fcrop64=1,00005a57ffffa5a8-k-c0xffffffff-no-nd-rj"
+  document.getElementById('BannerResult').src = linkbanner_;
+  var bannere = document.getElementById('BannerResult').src = linkbanner_;
+  sessionStorage.setItem("linkbanneryt", linkbanner_)
   //Colocar link do canal nas info ao lado do banner
   var idcanal_valueinput = document.getElementById('SearchBanner').value
   document.getElementById('LINK').innerText = idcanal_valueinput
   document.getElementById('LINK').href = idcanal_valueinput
   document.getElementById('LINK').setAttribute('target', '_blank')
   sessionStorage.setItem('etp2',true);
-  sessionStorage.setItem("linkbanner-ld", linkbanner_resultado);
-  console.log(linkbanner_resultado)
 })
 }
 
