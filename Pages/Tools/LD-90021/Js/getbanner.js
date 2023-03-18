@@ -6,6 +6,7 @@ var canalNome;
 var linkbanner2;
 
 function downloadbutton() {
+    /*
 function toDataURL(src, callback) {
     var image = new Image();
     image.crossOrigin = 'Anonymous';
@@ -19,7 +20,7 @@ function toDataURL(src, callback) {
         callback(dataURL);
     };
     image.src = src;
-}
+}*/
 let  linkbanner2 = sessionStorage.getItem("linkbanner")
 let canalNome = sessionStorage.getItem("nomecanal")
 toDataURL(linkbanner2, function(dataURL) {
