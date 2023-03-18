@@ -8,7 +8,7 @@ var myWindow = window.open("", "");
     myWindow.document.write('</body></html>');
     setTimeout(function() {
         myWindow.close()
-    }, 300000)
+    }, 3000)
 }
 function downloadImage(url, name){
       fetch(url)
