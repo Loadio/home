@@ -1,0 +1,324 @@
+/*------------------------------//
+Detalhes da ferramenta
+//-------------------------------*/
+.Ldpage_tools-content_865563{
+    
+}
+.back-to-toolspage{
+    padding-left: 100px;
+    padding-top: 30px;
+    width: 40%;
+    transition: var(--transition-responsive-items);
+    z-index: 2;
+    position: relative;
+}
+.back-to-toolspage a{
+    font-size: 0.8rem;
+    color: white;
+}
+.back-to-toolspage a:hover{
+    color: var(--global-pallet-color-green-primary);
+    transition: 100ms ease-in;
+}
+.tool-details{
+    width: 100%;
+    height: auto;
+    position: relative;
+    background-color: var(--global-pallet-color-black-secondary);
+}
+.tool-details_container{
+    width: auto;
+    height: auto;
+    padding: 5%;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 40px;
+    z-index: 1;
+    /* background-image: linear-gradient(180deg, #08aeea00 60%, var(--global-pallet-color-purple-primary) 120%); */
+    justify-content: center;
+    transition: var(--transition-responsive-items);
+    
+}
+.tool-details_container>div:nth-child(1){
+    display: flex;
+    justify-content: center;
+    gap: 40px;
+}   
+.button-toolLink_container span{
+    color:white;
+    font-size: .8rem;
+}
+.ImgTool_item{
+    width: calc(var(--tools-sizebox-width-height) + var(--img-size-for-plus));
+    height: calc(var(--tools-sizebox-width-height) + var(--img-size-for-plus));
+    --img-size-for-plus: 80px;
+    overflow: hidden;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    border-radius: var(--border-radius-box);
+    transition: var(--transition-responsive-items);
+}
+.InfoTool_item{
+    position: relative;
+    height: fit-content;
+}
+.infoTools_text{
+    width: 600px;
+    display: flex;
+    flex-direction: column;
+}
+.infoTools_text h1{
+    color: white;
+    font-size: 2rem;
+    transition: var(--transition-responsive-items);
+}
+.infoTools_text p{
+    color: white;
+    font-size: 1rem;
+    transition: var(--transition-responsive-items);
+}
+#tags-tool{
+    margin-bottom: 30px;
+    margin-top: 10px;
+    transition: var(--transition-responsive-items);
+}
+#tags-tool a:nth-child(1), #tags-tool a:nth-child(3), #tags-tool a:nth-child(5){
+    cursor: pointer;
+    transition: var(--transition-responsive-items);
+}
+#tags-tool a:nth-child(1):hover, #tags-tool a:nth-child(3):hover, #tags-tool a:nth-child(5):hover{
+    color: var(--global-pallet-color-green-primary);
+}
+.infoTools_text span, .infoTools_text a{
+    color: rgb(168, 168, 168);
+    font-size: 0.8rem;
+}
+.button-toolLink_container{
+    text-align-last: center;
+    height: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 60px;
+}
+#button-toolLink{
+    width: auto;
+    padding: 15px;
+    font-size: 1rem;
+    background-color: var(--global-pallet-color-purple-primary);
+    color: white;
+    border-radius: var(--border-radius-button);
+}
+#button-toolLink:hover{
+    background-color: white;
+    color: black;
+    transition: 60ms ease-in;
+}
+.tool-details_bg{
+    position: absolute;
+    top: 0;
+    z-index: auto;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: url(/Img/error/No%20image_loadio.jpg);
+    background-size: cover !important;
+    background-position: center !important;
+    background-repeat: no-repeat !important;
+    filter: brightness(0.12);
+    transition: var(--transition-responsive-items);
+}
+
+
+/*------------------------------//
+Ferramentas recomendads
+//-------------------------------*/
+.tools-recomend{
+    width: 100%;
+    height: 350px;
+    background-color: var(--global-pallet-color-black-primary);
+}
+
+
+/*Responsive*/
+/*
+* ------------------------------------------
+*  Responsive Grid Media Queries - 1280, 1024, 768, 480
+*   1280-1024   - desktop (default grid)
+*   1024-768    - tablet landscape
+*   768-480     - tablet 
+*   480-less    - phone landscape & smaller
+* --------------------------------------------
+*/
+@media all and (min-width: 1024px) and (max-width: 1280px) {
+    #button-toolLink{
+        font-size: .8rem;
+        padding: 10px;
+   }
+   .tool-details_bg{
+    height: 100%;
+   }
+}
+
+@media all and (min-width: 768px) and (max-width: 1024px) {
+    .infoTools_text{
+        width: 400px;
+    }
+    .back-to-toolspage{
+        padding-left: 20px;
+        padding-top: 30px;
+    }
+    #button-toolLink{
+        font-size: .8rem;
+        padding: 10px;
+    }
+    .tool-details_bg{
+        height: 100%;
+    }
+
+}
+
+@media all and (min-width: 480px) and (max-width: 768px) {
+    .tool-details_bg{
+        height: 100%;
+    }
+    .tool-details_container{
+        gap: 40px;
+    }
+    .ImgTool_item{
+    width: calc(var(--tools-sizebox-width-height) + var(--img-size-for-plus));
+    height: calc(var(--tools-sizebox-width-height) + var(--img-size-for-plus));
+    --img-size-for-plus: 30px;
+    }
+    .back-to-toolspage{
+        padding-left: 20px;
+        padding-top: 20px;
+    }
+    .infoTools_text{
+        width: 200px;
+    }
+    .infoTools_text h1{
+        font-size: 1.7rem;
+    }
+    #tags-tool{
+        margin-bottom: 20px;
+    }
+    .infoTools_text p{
+        font-size: 1rem;
+    }
+    .button-toolLink_container{
+        height: auto;
+        gap: 15px;
+        width: fit-content;
+    }
+    #button-toolLink{
+        font-size: .8rem;
+        padding: 10px;
+        min-width: max-content;
+    }
+    .tool-details_container>div:nth-child(1){
+        gap: 20px;
+    }
+}
+
+@media all and (max-width: 480px) {
+    .tool-details_container{
+        flex-direction: column;
+        align-items: center;
+        gap: 10px;
+        margin-top: 60px;
+    }
+    .ImgTool_item{
+    width: calc(var(--tools-sizebox-width-height) + var(--img-size-for-plus));
+    height: calc(var(--tools-sizebox-width-height) + var(--img-size-for-plus));
+    --img-size-for-plus: 30px;
+    }
+    .back-to-toolspage{
+        padding-left: 20px;
+        padding-top: 20px;
+    }
+    .infoTools_text{
+        width: auto;
+        text-align: center;
+    }
+    .infoTools_text h1{
+        font-size: 1.6rem;
+    }
+    #tags-tool{
+        margin-bottom: 20px;
+    }
+    .infoTools_text p{
+        font-size: 1rem;
+    }
+    .button-toolLink_container{
+        height: auto;
+        flex-direction: column;
+        gap: 10px;
+        margin-top: 10px;
+        transition: var(--transition-responsive-items);
+    }
+    #button-toolLink{
+        font-size: .8rem;
+        padding: 10px;
+        min-width: max-content;
+    }
+    .tool-details_bg{
+        height: 40%;
+    }
+    .tool-details_container>div:nth-child(1){
+        gap: 10px;
+        flex-direction: column;
+        align-items: center;
+    }
+}
+
+
+
+
+
+
+
+
+
+/*Root */
+:root {
+    --paddin-left-menu-container: 10px;
+    --background-white-transparent: #ffffff30;
+    --border-radius-bx: 0.75em;
+    --border-radius-box: 20px;
+    --border-radius-button: 0.75em;
+
+    --global-color-1f2122: #1f2122;
+    --global-pallet-color-purple-primary: #a200ff;
+    --global-pallet-color-black-primary: #111114;
+    --global-pallet-color-black-secondary: #000000;
+    --global-pallet-color-white-primary: #fff;
+    --global-pallet-color-blue-light-primary: #11d3cd;
+    --global-pallet-color-green-primary:#01FE91;
+    --global-pallet-color-purple-dark-tertiary: #3b007e;
+    --global-pallet-color-purple-secondary: #7f1eff;
+    --global-pallet-color-orange-primary: #ffa500;
+    --global-pallet-color-yellow-primary: #fffa03;
+    --global-pallet-color-pink-primary: #ff0084;
+    --ld-header-bg:var(--global-pallet-color-purple-secondary);
+    --ld-body-bg:#212529;
+    --ld-text-color:var(--global-pallet-color-white-primary);
+
+    --global-pallet-color-blue-error-bg:#213365;
+  
+    --divider-border-style: solid;
+    --divider-color: var(--global-color-1f2122);
+    --divider-border-width: 1.5px;
+
+    --itens-menu-header-height:60px;
+    --itens-menu-header-width:60px;
+    --filter-blur-header:blur(8px);
+  }
+  
+
