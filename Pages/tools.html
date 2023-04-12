@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="https://loadio.github.io/home/Img/logo/favicon-loadio-redondo.png" type="image/x-icon">
+
+    <!--Links css-->
+  <link rel="stylesheet" href="https://loadio.github.io/home/Css/Pages/ToolsPage.css">
+  <link rel="stylesheet" href="https://loadio.github.io/home/Css/loadio.css">
+  <!-- Font-awesome Icon 1.5 -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/brands.min.css">
+    <title></title>
+</head>
+<body>
+    <section id="loadio-header-element-export">
+    </section>
+    <main>
+    <section class="Ldpage_tools-content_865563" id="contentTools_page">
+        <section class="tool-details">
+            <div class="back-to-toolspage">
+                <a href="http://127.0.0.1:5500/web-tools.html"><--- Voltar para as Ferramentas</a>
+            </div>
+            <div class="tool-details_container">
+                <div>
+                <div class="ImgTool_item">
+                    <img src="/Img/error/No image_loadio.jpg" loading="lazy" id="ImgTool">
+                </div>
+                <div class="InfoTool_item">
+                    <div class="infoTools_text">
+                        <h1 id="title-tool">Loading...</h1>
+                        <span id="tags-tool"></span>
+                        <p id="description-tool">Loading...</p>
+                    </div>
+                </div>
+                </div>
+                <div class="button-toolLink_container">
+                    <!-- <a href="" class="toolLink01" id="button-toolLink">Testar ferramenta</a>
+                    <a class="toolLink02"></a> -->
+                </div>
+                </div>
+            <div class="tool-details_bg">
+            </div>
+        </section>
+        <section class="tools-recomend"></section>
+    </section>
+    </main>
+    <section id="loadio-footer-element-export"></section>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>   
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/js/all.min.js"></script> 
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script> 
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
+    <script src="/Js/Allpages-sync/loadioElements_import.js"></script>
+    <script src="/data/posts_tools.js"></script>
+    <script src="/js/slide-script.js"></script>
+    <script src="/js/script-loadio.js"></script>
+    <script src="/data/GetUrlsVars.js"></script>
+
+<script>
+var idSelector = getUrlVars()["ld"];
+var Filter_IdTool = idSelector.split('#').pop().split()
+var IdResult = Number(Filter_IdTool[0])
+var idToolLD = IdResult - 1
+var idToolEnd = LDtoolsPosts[idToolLD];
+$('#title-tool').text(idToolEnd.titulo)
+$('#ImgTool').attr('src',idToolEnd.urlImage.imagem_ferramenta)
+$('.tool-details_bg').css('background',"url("+idToolEnd.urlImage.imagem_ferramenta+")")
+$('#description-tool').text(idToolEnd.descrição)
+$('.toolLink01').attr("href",idToolEnd.link_ferramenta)
+if (idToolEnd.link_ferramenta) {
+    $('.button-toolLink_container').html('<a href="" class="toolLink01" id="button-toolLink">Testar ferramenta na Loadio</a><span style="display:none;" class="toolLinkOR">ou</span><a style="display: none;" href="" class="toolLink02"></a>')
+    $('.toolLink01').attr("href",idToolEnd.link_ferramenta)
+setTimeout( function(){
+if (idToolEnd.link_ferramenta_externa) {
+    $('.toolLink02').text('Ir para o site original').attr("href",idToolEnd.link_ferramenta_externa)
+    $('.toolLink02').attr('id','button-toolLink').css('display','block')
+    $('.toolLinkOR').css('display','block')
+}},1000)
+}
+var TagsTool = '';
+var TagsHtml = '';
+var ttt = 'tag1'
+for (let i = 0; i < 5; i++) {
+    TagsTool += '<a>'+idToolEnd.tags['tag'+(i+1)]+'</a>'
+    
+$('#tags-tool').html(TagsTool)
+$('#tags-tool a').text()
+}
+</script>
+</body>
+</html>
