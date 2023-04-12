@@ -3,8 +3,8 @@
 I'm currently making a site called "Loadio", which brings together several internet tools in one place, whether for productivity, fun, leisure, etc… “*There are several tools on the internet!*” In addition, the site has its own tools, which may or may not have unique features! How about taking a look at them? Maybe you'll end up liking it :)
 
 ### Where is the site currently? 🎈
-Currently the site is hosted on the "**Wix Site**", but in the future I want a custom domain! Type: `.com`, `.io` and etc...
-You can access the site here: [loadio.wixsite.com/home](https://loadio.wixsite.com/home)
+Currently the site is hosted on the "**GitHub**", but in the future I want a custom domain! Type: `.com`, `.io` and etc...
+You can access the site here: [loadio.github.io/home](https://loadio.github.io/home/)
 
 ### Loadio? What is that? 🤔
 A place where you gather several internet tools in one place, helping your productivity. That's Loadio!
