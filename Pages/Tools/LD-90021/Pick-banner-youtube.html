@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html  lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title></title>
+  <link rel="shortcut icon" href="https://loadio.github.io/home//Img/logo/favicon-loadio-redondo.png" type="image/x-icon">
+
+  <!--Links css-->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/brands.min.css">
+  <link rel="stylesheet" href="https://loadio.github.io/home/Pages/Tools/LD-90021/Css/styledefault.css">
+  <link rel="stylesheet" href="https://loadio.github.io/home/Css/loadio.css">
+
+</head>
+<body>
+  <section id="loadio-header-element-export">
+  </section>
+<div id="alert-popup"></div>
+<main>
+<section id="header">
+  <div id="main-search">
+    <div class="main-SZ">
+    <h1 id="Title">Coletor de Banner Youtube</h1>
+    <p style="color:white;margin-bottom:4%;">Colete banners de canais do youtube colocando o link do canal abaixo!</p>
+    <div class="search-elements">
+      <div class="input-search">
+        <input placeholder="Coloque o link do seu canal aqui" id="SearchBanner"/>
+      </div>
+  <!--<input placeholder="Id canal" id="user" />-->
+  <div class="button-search">
+  <button id="Button_search" onclick="checklink()">
+    <a><span class="icon-search-button"><svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" class="bi bi-search" viewBox="0 0 16 16">
+      <path d="M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001c.03.04.062.078.098.115l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85a1.007 1.007 0 0 0-.115-.1zM12 6.5a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0z"/>
+    </svg></span></a>
+  </button>
+  </div>
+    </div>
+    <div id="exemplos">
+      <strong style="margin-right: 1%;align-self: center;">Use:</strong>
+      <div class="canal-id">https://www.youtube.com/channel/UChtFXKFuVJxWi3AUSF3e8Vw</div>
+      <strong style="margin-right: 3%;align-self: center;">ou</strong>
+      <div class="canal-identificador">https://www.youtube.com/@Atm</div>
+    </div>
+  </div>
+</div>
+</section>
+  <!-- Conteúdo site -->
+
+<section id="content">
+  <div id="preloader">
+    <div id="status">&nbsp;</div>
+    <div class="loaders">
+      <span class="loader"></span>
+      <span class="title">Aguarde um instante, estámos coletando os dados :3 
+        Que tal tomar um café ☕ enquanto isso?!</span>
+    </div>
+  </div>
+  <div class="itens-content">
+    <div class="info-channel">
+      <h3 id="titleinfo"></h3>
+      <span class="description-info">Caso o banner não apareça, verifique se o link do canal está correto.</span>
+    </div>
+    <div class="log-001">
+      <div id="YtInfo"></div>
+    </div>
+  </div>
+  <div class="content-elements">
+  <div class="result-banner box-result">
+    <img id="BannerResult" src=""/>
+  </div>
+  <div id="info-download">
+    <div class="layout-info">
+  <div class="Showinfo-channel">
+  <h3 class="title-info-c">Informações do canal:</h3>
+  <div class="list-info-c">
+    <p class="item1"><span>Nome do canal:</span><span id="NOME"></span></p>
+    <p class="item2"><span>Id do canal:</span><span id="ID"></span></p>
+    <p class="item3"><span>Link do canal:</span><a href="#" id="LINK"></a></p>
+  </div>
+  </div>
+  <div id="button-download">
+    <div class="button-item">
+      <button onclick="downloadbutton()" id="buttom-dowload"><i class="download-icon fa-solid fa-cloud-arrow-down"></i>Fazer Download</button>
+    </div>
+  </div>
+  </div>
+  </div>
+</div>
+<div class="Aviso-error"><p>Esta ferramenta não é <strong>100% otimizada</strong> e <strong>garantida</strong> que vá funcionar! Pesso desculpa caso algum erro apareça :3<a href=""></a></p></div>
+</section>
+<section id="page-info-site">
+    <div class="howuse" id="How-use">
+      <div class="howuse-header">
+      <i id="logo-howuse" class="fa-solid fa-gear"></i>
+      <h3 class="title-howuse">Como usar o site:</h3>
+      </div>
+      <div class="descriptiion-howuse">
+      <p style="display: flex;flex-direction: column;align-items: stretch;">
+        <div>Está ferramenta é bem símples de ser usada, basta primeiramente, copiar o link do canal que deseja obter o banner do canal. seja seu canal ou não, basta copiar.<br></div>
+      <li>1° Selecione o canal que deseje, e vá nos <svg style="fill: white;top: 0.5rem;position: relative;background-color: #00000061;border-radius: 20px;" xmlns="http://www.w3.org/2000/svg" enable-background="new 0 0 24 24" height="24" viewBox="0 0 24 24" width="24">
+      <path d="M12,16.5c0.83,0,1.5,0.67,1.5,1.5s-0.67,1.5-1.5,1.5s-1.5-0.67-1.5-1.5S11.17,16.5,12,16.5z M10.5,12 c0,0.83,0.67,1.5,1.5,1.5s1.5-0.67,1.5-1.5s-0.67-1.5-1.5-1.5S10.5,11.17,10.5,12z M10.5,6c0,0.83,0.67,1.5,1.5,1.5 s1.5-0.67,1.5-1.5S12.83,4.5,12,4.5S10.5,5.17,10.5,6z"></path></svg></li>
+      <li>2° vá em <strong>Compartilhar</strong>.<br></li>
+      <li>3° E por fim em <strong>Copiar</strong>.<br><br></li>
+        <img width="100%" src="Img/How get link channel youtube phone.png" alt="Obtendo link do canal no youtube"><br><br>
+        Na versão de Desktop/Pc, basta copiar o link direto da barra do navegador!<br>
+        <img width="100%" src="Img/How get link channel youtube pc.png" alt="Como pesquisar e obter o banner"><br><br>
+        Após isso, basta colocar na barra de pesquisa  que fica no topo do site, e apertar em <strong>Enter</strong>, <strong>Enviar</strong> ou no <strong>Icone da lupa</strong>.<br> 
+        O site irá pesquisar o canal que você escolheu, e tentará pegar o banner desse canal :3<br>
+        ㅤÈ importante dizer que essa ferramenta <strong>não é 100% Otimizada</strong> e <strong>funcional</strong>, então pode ser que o site não consiga obter o banner do canal 😭
+      </p>
+    </div>
+    </div>
+    <div class="info-site" id="About">
+      <div class="info-site-header">
+      <i id="logo-info-site" class="fa-solid fa-circle-info"></i>
+      <h3 class="title-info-site">Sobe o site:</h3>
+     </div>
+     <div class="descriptiion-info-site">
+      <p>
+        ㅤEste site é uma ferramenta para coletar Banners de canais no Youtube de forma simples! Além disso, está ferramenta é totalmente criada do zero, e não tem apoio do YouTube na criação dessa ferramenta.<br/>
+        ㅤO site não tem intenção de coletar nenhum dado pessoal, nenhum úsuario do site, ou do Youtube, teram seus dados pessoais coletados pelo site.<br>
+        ㅤÁ criação do site foi por motivos de necessiadade, minha e de outras pessoas :D pois existia bastante difilculdade de baixar, ou coletar os
+        banner de outros, ou do seu próprio canal. Sabendo que o Youtube não disponibiliza uma maneira de baixar os banners, essse site/ferramenta pode
+        te ajudar com isso!
+      </p>
+     </div>
+    </div>
+</section>
+</main>
+<section id="loadio-footer-element-export"></section>
+</div>
+<!--Scripts-->
+<script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>   
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/js/all.min.js"></script> 
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script> 
+<script src="https://loadio.github.io/home/Pages/Tools/LD-90021/Js/getvaluechannel.js"></script>
+<script src="https://loadio.github.io/home/Pages/Tools/LD-90021/Js/getbanner.js"></script>
+<script src="https://loadio.github.io/home/Js/Allpages-sync/loadioElements_import.js"></script>
+<script src="https://loadio.github.io/home/Js/script-loadio.js"></script>
+</body>
+</html>
