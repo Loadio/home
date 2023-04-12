@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="https://loadio.github.io/home/Img/logo/favicon-loadio-redondo.png" type="image/x-icon">
+
+  <!--Font import-->
+  <link href="https://fonts.cdnfonts.com/css/cera-round-pro" rel="stylesheet">
+    <!--Links css-->
+  <link rel="stylesheet" href="https://loadio.github.io/home/Css/dropdowns.css">
+  <link rel="stylesheet" href="https://loadio.github.io/home/Css/loadio.css">
+  <!-- Font-awesome Icon 1.5 -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/brands.min.css">
+    <title></title>
+</head>
+<body>
+    <section id="loadio-header-element-export">
+    </section>
+    <section class="Ldtools-content_800563" id="contentTools">
+        <section class="HeaderTool-container">
+            <div class="headerTool-Item">
+                <h1 class="HeaderTool-title">Ferramentas</h1>
+            </div>
+        </section>
+        <section class="tools-loadio_650200">
+                <div class="tool-container">
+                <div class="tool-items">
+              <ul>
+             
+              </ul>
+              <div class="pagination_tools">
+              </div>
+                </div>
+                </div>
+        </section>
+    </section>
+    <section id="loadio-footer-element-export"></section>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>   
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/js/all.min.js"></script> 
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script> 
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
+    <script src="https://loadio.github.io/home/Js/Allpages-sync/loadioElements_import.js"></script>
+    <script src="https://loadio.github.io/home/data/posts_tools.js"></script>
+    <script src="https://loadio.github.io/home/js/script-loadio.js"></script>
+    <script src="https://loadio.github.io/home/data/GetUrlsVars.js"></script>
+    
+<script>
+    //-------------------------
+    //Paginação
+    //-------------------------
+    function pagination (page, total, limit) {
+      var pageSize = Math.ceil(total/limit);
+      
+      var _pagination = {
+          page: page,
+          total_de_posts: total,
+          limit_de_posts: limit,
+          pages_no_total: pageSize
+        };
+      if(page > 1){
+        var prev = page-1;
+        _pagination.previous = prev;
+      }
+    
+      var remaining = total - (page * limit);
+    
+      if(remaining > 0){
+        _pagination.next = page+1;
+      }
+    
+      return _pagination;
+    }
+    
+    //------------------------
+      //Found on https://stackoverflow.com/a/20097994/5394675
+    
+    var array = LDtoolsPosts;
+    var pageQuery = getUrlVars()["Page"]; //Pagina ativa(Que estou no momento)
+    var page = parseInt(pageQuery) || 1; //Converte pagina antiga para um número inteiro, ou, caso não encontre o "pageQuery", "page" recebe: "1"(caso acesse a pagina sem usar a 'paginação')
+    // var limit = 6; //Limite de post que aparecerão
+    var limit = 6;
+    const LimitPosShowwebtool = window.matchMedia("(min-width: 1280px)");
+    if (LimitPosShowwebtool.matches) {
+      var limit = 5;
+    }
+    const LimitPosShow = window.matchMedia("(max-width: 1280px)");
+    if (LimitPosShow.matches) {
+      var limit = 4;
+    }
+    var offset = (page - 1) * limit;
+    var total = array.length;
+    var items = array.slice(offset, offset+limit);
+    var PaginationResult = pagination(page, total, limit)
+    // console.log(items);
+    //console.log(pagination(page, total, limit));
+    //-------------------------
+    var Ld_postsHtml = "";
+      for (let i = 0; i < items.length; i++) {
+        var NextPages = pageQuery > 1?limit * Number(pageQuery) - limit + 1 + i:(i+1);
+        // var teeste = pageQuery > 1?limit * Number(pageQuery) - limit + 1 + i:'(i+1):'+(i+1);
+        // console.log(NextPages+' | '+teeste)
+        // console.log(LDtools_posts[i])
+        var Ld_post = items[i]
+        var items_post = 
+        '<a href="/Pages/tools.html?ld='+Ld_post.selecttool_Id+'#'+NextPages+'">'+
+          '<div class="image-tool">'+
+            '<img src="'+Ld_post.urlImage.imagem_ferramenta+'" loading="lazy"/>'+
+            '</div>'+
+        '<div class="description-tool">'+
+          '<h3>'+Ld_post.titulo+'</h3>'+
+          '<p>'+Ld_post.descrição+'</p>'+
+          '</div>'+
+          '</a>';
+        Ld_postsHtml += items_post;
+      }
+      $('.tool-items ul').html(Ld_postsHtml)
+    
+    
+      if (pageQuery > PaginationResult.pages_no_total) {
+      $('.tool-items ul').html('<style>.tools-recomend_151756 .tool-items ul{grid-template-columns:none;}</style><h3 style="margin-bottom:20px;color:white;">Nenhum item foi encontrado!</h3>')
+    }
+    
+      //-----------------------
+      // <a class="active">1</a>
+      var PaginationNumbers = "";
+      for (let i = 0; i < PaginationResult.pages_no_total; i++) {
+        var PaginaAtiva = (i+1);
+        var Page_active = page === PaginaAtiva?'active':'';
+        PaginationNumbers += '<a href="web-tools.html?Page='+PaginaAtiva+'" class="'+Page_active+'">'+PaginaAtiva+'</a>';
+      }
+      $('.pagination_tools').html(PaginationNumbers)
+    </script>
+    </body>
+    </html>
