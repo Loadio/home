@@ -1821,6 +1821,9 @@ footer {
   /*--------------------------
   Main home page Responsive
 --------------------------*/
+  .loadio-info_47742 {
+  background: var(--global-pallet-color-blue-error-bg);
+  }
   .Ldhome_loadio-element-main_08856 h2 {
     font-size: 1.6rem;
   }
@@ -2246,6 +2249,9 @@ footer {
   /*--------------------------
   Main home page Responsive
 --------------------------*/
+  .loadio-info_47742 {
+  background: var(--global-pallet-color-blue-error-bg);
+  }
   .loadio-info_47742 span h1 {
     font-size: 30px;
   }
