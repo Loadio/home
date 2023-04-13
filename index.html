@@ -311,7 +311,7 @@ method="POST"
 <script src="https://loadio.github.io/home/Js/script-loadio.js"></script>
 
 <script>
-
+setTimeout( function (){
 //-------------------------
 //Paginação
 //-------------------------
@@ -389,7 +389,7 @@ var Ld_postsHtml = "";
   if (pageQuery > PaginationResult.pages_no_total) {
   $('.tool-items ul').html('<style>.tools-recomend_151756 .tool-items ul{grid-template-columns:none;}</style><h3 style="margin-bottom:20px;color:white;">Nenhum item foi encontrado!</h3>')
 }
-
+},1000)
   // //-----------------------
   // // <a class="active">1</a>
   // var PaginationNumbers = "";
