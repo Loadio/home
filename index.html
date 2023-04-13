@@ -297,6 +297,11 @@ method="POST"
         </div>
       </footer>
 </section>
+<!-- Data post -->
+<script src="https://loadio.github.io/home/data/posts_tools.js"></script>
+<script src="https://loadio.github.io/home/data/GetUrlsVars.js"></script>
+<script src="https://loadio.github.io/home/Js/script-loadio.js"></script>
+  
 <!--Scripts--> 
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/js/all.min.js"></script> 
@@ -305,39 +310,33 @@ method="POST"
 <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-9146378980885815" crossorigin="anonymous"></script>
 <script src="https://loadio.github.io/home/Js/loadioElements_export.js"></script>
 
-<!-- Data post -->
-<script src="https://loadio.github.io/home/data/posts_tools.js"></script>
-<script src="https://loadio.github.io/home/data/GetUrlsVars.js"></script>
-<script src="https://loadio.github.io/home/Js/script-loadio.js"></script>
-
 <script>
 setTimeout( function (){
 //-------------------------
 //Paginação
 //-------------------------
 function pagination (page, total, limit) {
-  var pageSize = Math.ceil(total/limit);
-  
-  var _pagination = {
-      page_ativa: page,
-      total_de_posts: total,
-      limit_de_posts: limit,
-      pages_no_total: pageSize
-    };
-
-  if(page > 1){
-    var prev = page-1;
-    _pagination.previous = prev;
-  }
-
-  var remaining = total - (page * limit);
-
-  if(remaining > 0){
-    _pagination.next = page+1;
-  }
-
-  return _pagination;
-}
+      var pageSize = Math.ceil(total/limit);
+      
+      var _pagination = {
+          page: page,
+          total_de_posts: total,
+          limit_de_posts: limit,
+          pages_no_total: pageSize
+        };
+      if(page > 1){
+        var prev = page-1;
+        _pagination.previous = prev;
+      }
+    
+      var remaining = total - (page * limit);
+    
+      if(remaining > 0){
+        _pagination.next = page+1;
+      }
+    
+      return _pagination;
+    }
 
 //------------------------
   //Found on https://stackoverflow.com/a/20097994/5394675
@@ -351,45 +350,48 @@ function pagination (page, total, limit) {
 }
 
 var array = LDtoolsPosts;
-var pageQuery = getUrlVars()["Page"]; //Pagina ativa(Que estou no momento)
-var page = parseInt(pageQuery) || 1; //Converte pagina antiga para um número inteiro, ou, caso não encontre o "pageQuery", "page" recebe: "1"(caso acesse a pagina sem usar a 'paginação')
-var limit = 6; //Limite de post que aparecerão
-const LimitPosShow = window.matchMedia("(max-width: 390px)");
-    if (LimitPosShow.matches) {
+    var pageQuery = getUrlVars()["Page"]; //Pagina ativa(Que estou no momento)
+    var page = parseInt(pageQuery) || 1; //Converte pagina antiga para um número inteiro, ou, caso não encontre o "pageQuery", "page" recebe: "1"(caso acesse a pagina sem usar a 'paginação')
+    // var limit = 6; //Limite de post que aparecerão
+    var limit = 6;
+    const LimitPosShowwebtool = window.matchMedia("(max-width: 390px)");
+    if (LimitPosShowwebtool.matches) {
       var limit = limit - 2;
     }
-var offset = (page - 1) * limit;
-var total = array.length;
-var items = array.slice(offset, offset+limit);
-var PaginationResult = pagination(page, total, limit)
+    var offset = (page - 1) * limit;
+    var total = array.length;
+    var items = array.slice(offset, offset+limit);
+    var PaginationResult = pagination(page, total, limit)
 // console.log(items);
 //console.log(pagination(page, total, limit));
 
 //-------------------------
 var Ld_postsHtml = "";
-  for (let i = 0; i < limit; i++) {
-    var NextPages = pageQuery > 1?limit * Number(pageQuery) - limit + 1 + i:(i+1);
-    // console.log(LDtools_posts[i])
-    var Ld_post = items[i]
-    var items_post = 
-    '<a href="/home/Pages/tools.html?ld=#'+NextPages+'">'+
-      '<div class="image-tool">'+
-        '<img src="'+Ld_post.urlImage.imagem_ferramenta+'" loading="lazy"/>'+
-        '</div>'+
-    '<div class="description-tool">'+
-      '<h3>'+Ld_post.titulo+'</h3>'+
-      '<p>'+Ld_post.descrição+'</p>'+
-      '</div>'+
-      '</a>';
-    Ld_postsHtml += items_post;
-  }
+      for (let i = 0; i < items.length; i++) {
+        var NextPages = pageQuery > 1?limit * Number(pageQuery) - limit + 1 + i:(i+1);
+        // var teeste = pageQuery > 1?limit * Number(pageQuery) - limit + 1 + i:'(i+1):'+(i+1);
+        // console.log(NextPages+' | '+teeste)
+        // console.log(LDtools_posts[i])
+        var Ld_post = items[i]
+        let Tool_img = Ld_post.urlImage.imagem_ferramenta || "https://loadio.github.io/home/Img/error/No%20image_loadio.jpg"
+        var items_post = 
+    '<a href="/home/Pages/tools.html?ld='+Ld_post.selecttool_Id+'#'+NextPages+'">'+
+          '<div class="image-tool">'+
+            '<img src="'+Tool_img+'" loading="lazy"/>'+
+            '</div>'+
+        '<div class="description-tool">'+
+          '<h3>'+Ld_post.titulo+'</h3>'+
+          '<p>'+Ld_post.descrição+'</p>'+
+          '</div>'+
+          '</a>';
+        Ld_postsHtml += items_post;
+      }
   $('.tool-items ul').html(Ld_postsHtml)
-
-
-  if (pageQuery > PaginationResult.pages_no_total) {
-  $('.tool-items ul').html('<style>.tools-recomend_151756 .tool-items ul{grid-template-columns:none;}</style><h3 style="margin-bottom:20px;color:white;">Nenhum item foi encontrado!</h3>')
-}
-},5000)
+    
+    
+      if (pageQuery > PaginationResult.pages_no_total) {
+      $('.tool-items ul').html('<style>.tools-recomend_151756 .tool-items ul{grid-template-columns:none;}</style><h3 style="margin-bottom:20px;color:white;">Nenhum item foi encontrado!</h3>')
+    }
   // //-----------------------
   // // <a class="active">1</a>
   // var PaginationNumbers = "";
