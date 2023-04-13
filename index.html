@@ -370,18 +370,19 @@ var Ld_postsHtml = "";
   for (let i = 0; i < limit; i++) {
     var NextPages = pageQuery > 1?limit * Number(pageQuery) - limit + 1 + i:(i+1);
     // console.log(LDtools_posts[i])
-    var Ld_post = items[i]
-    var items_post = 
-    '<a href="/home/Pages/tools.html?ld='+Ld_post.selecttool_Id+'#'+NextPages+'">'+
-      '<div class="image-tool">'+
-        '<img src="'+Ld_post.urlImage.imagem_ferramenta+'" loading="lazy"/>'+
-        '</div>'+
-    '<div class="description-tool">'+
-      '<h3>'+Ld_post.titulo+'</h3>'+
-      '<p>'+Ld_post.descrição+'</p>'+
-      '</div>'+
-      '</a>';
-    Ld_postsHtml += items_post;
+     var Ld_post = items[i]
+        let Tool_img = Ld_post.urlImage.imagem_ferramenta || "https://loadio.github.io/home/Img/error/No%20image_loadio.jpg"
+        var items_post = 
+        '<a href="/home/Pages/tools.html?ld='+Ld_post.selecttool_Id+'#'+NextPages+'">'+
+          '<div class="image-tool">'+
+            '<img src="'+Tool_img+'" loading="lazy"/>'+
+            '</div>'+
+        '<div class="description-tool">'+
+          '<h3>'+Ld_post.titulo+'</h3>'+
+          '<p>'+Ld_post.descrição+'</p>'+
+          '</div>'+
+          '</a>';
+        Ld_postsHtml += items_post;
   }
   $('.tool-items ul').html(Ld_postsHtml)
 
