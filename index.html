@@ -371,7 +371,8 @@ var Ld_postsHtml = "";
     var NextPages = pageQuery > 1?limit * Number(pageQuery) - limit + 1 + i:(i+1);
     // console.log(LDtools_posts[i])
     var Ld_post = items[i]
-    let Tool_img = Ld_post.urlImage.imagem_ferramenta || "https://loadio.github.io/home/Img/error/No%20image_loadio.jpg"
+    let NoImage = "https://loadio.github.io/home/Img/error/No%20image_loadio.jpg";
+    let Tool_img = Ld_post.urlImage.imagem_ferramenta || NoImage;
     var items_post = 
     '<a href="/home/Pages/tools.html?ld='+Ld_post.selecttool_Id+'#'+NextPages+'">'+
       '<div class="image-tool">'+
