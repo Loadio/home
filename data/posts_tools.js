@@ -14,7 +14,7 @@ var LDtoolsPosts =
     {
         "imagem_ferramenta":"",
     },
-    "descrição":"Em criação no momento",
+    "descrição":"Em criação no momento...",
     "link_ferramenta_externa":"",
     "selecttool_Id":"LD-90215"
 },
