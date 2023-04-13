@@ -66,9 +66,10 @@ var Filter_IdTool = idSelector.split('#').pop().split()
 var IdResult = Number(Filter_IdTool[0])
 var idToolLD = IdResult - 1
 var idToolEnd = LDtoolsPosts[idToolLD];
+let Tool_img = idToolEnd.urlImage.imagem_ferramenta || "https://loadio.github.io/home/Img/error/No%20image_loadio.jpg"
 $('#title-tool').text(idToolEnd.titulo)
-$('#ImgTool').attr('src',idToolEnd.urlImage.imagem_ferramenta)
-$('.tool-details_bg').css('background',"url("+idToolEnd.urlImage.imagem_ferramenta+")")
+$('#ImgTool').attr('src',Tool_img)
+$('.tool-details_bg').css('background',"url("+Tool_img+")")
 $('#description-tool').text(idToolEnd.descrição)
 $('.toolLink01').attr("href",idToolEnd.link_ferramenta)
 if (idToolEnd.link_ferramenta) {
