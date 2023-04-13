@@ -2,7 +2,7 @@
 var LDtoolsPosts = 
 [
 {
-    "titulo":"Testador de thumbnail youtube",
+    "titulo":"Testador de thumbnail",
     "tags":{
         "tag1":"Youtube", 
         "tag2":" | ",
@@ -12,12 +12,12 @@ var LDtoolsPosts =
     },
     "urlImage":
     {
-        "imagem_ferramenta":"",
+        "imagem_ferramenta":"https://loadio.github.io/home/Img/error/No%20image_loadio.jpg",
     },
     "descrição":"Em criação no momento...",
     "link_ferramenta":"",
     "link_ferramenta_externa":"",
-    "selecttool_Id":"LD-900200"
+    "selecttool_Id":"LD-90200"
 },
 {
     "titulo":"Coletor de banner youtube",
