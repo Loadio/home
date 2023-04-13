@@ -1,9 +1,6 @@
 /*------------------------------//
 Detalhes da ferramenta
 //-------------------------------*/
-.Ldpage_tools-content_865563{
-    
-}
 .back-to-toolspage{
     padding-left: 100px;
     padding-top: 30px;
@@ -127,7 +124,7 @@ Detalhes da ferramenta
     display: flex;
     align-items: center;
     justify-content: center;
-    background: url(/Img/error/No%20image_loadio.jpg);
+    background: url(https://loadio.github.io/home/Img/error/No%20image_loadio.jpg);
     background-size: cover !important;
     background-position: center !important;
     background-repeat: no-repeat !important;
