@@ -515,7 +515,10 @@ header .logo-img a svg {
   color: var(--global-pallet-color-yellow-primary);
 }
 .loadio-info_47742 span a strong:not(.button-main) {
-  font-family: "Loadio-Regular";
+  font-family: 'Cadet';
+  font-style: normal;
+  font-weight: normal;
+  font-display: auto;
   font-size: smaller;
 }
 .loadio-info_47742 a:not(.loadio-info_47742 span a) {
@@ -569,7 +572,10 @@ header .logo-img a svg {
   transition: ease-out 100ms;
   cursor: pointer;
   font-size: .8rem;
-  font-family: 'Loadio font medium', 'Helvetica Neue', -apple-system,sans-serif, Arial, Helvetica;
+  font-family: 'Cadet';
+  font-style: normal;
+  font-weight: normal;
+  font-display: auto;
 }
 .tools-recomend_151756 .button-main div:hover{
   background: #c3bfbf;
@@ -811,7 +817,10 @@ header .logo-img a svg {
   justify-content: center;
   justify-content: center;
   flex-direction: column;
-  font-family: 'Loadio font medium', 'Helvetica Neue', -apple-system,sans-serif, Arial, Helvetica;
+  font-family: 'Cadet';
+  font-style: normal;
+  font-weight: normal;
+  font-display: auto;
   color: var(--global-pallet-color-black-secondary);
 }
 .Ldhome_Parceria-element_23926 #slider ul li img {
@@ -1039,7 +1048,10 @@ footer {
   text-align: inherit;
   font-size: 1rem;
   line-height: 30px;
-  font-family: "Loadio-Thin", Arial, Helvetica, sans-serif;
+  font-family: 'Cadet';
+  font-style: normal;
+  font-weight: normal;
+  font-display: auto;
 }
 .Ldpp_content-main_888465 ul,
 .Ldpp_content-main_888465 ul li {
@@ -1094,7 +1106,10 @@ footer {
   text-align: inherit;
   font-size: 1rem;
   line-height: 25px;
-  font-family: 'Loadio font medium', 'Helvetica Neue', -apple-system,sans-serif, Arial, Helvetica;
+  font-family: 'Cadet';
+  font-style: normal;
+  font-weight: normal;
+  font-display: auto;
 }
 .Ldterms_content-main_800465 ul,
 .Ldterms_content-main_800465 ul li {
@@ -1321,7 +1336,10 @@ footer {
 
 .tools-loadio_650200 .tool-items ul a .description-tool p {
   font-size: 0.9rem;
-  font-family: "Loadio-thin", Arial, Helvetica, sans-serif;
+  font-family: 'Cadet';
+  font-style: normal;
+  font-weight: normal;
+  font-display: auto;
   display: -webkit-box;
   max-width: calc(var(--tools-sizebox-width-height) + 30px);
   -webkit-line-clamp: 3;
@@ -1895,8 +1913,11 @@ footer {
     left: 0;
   }
   .title-dropdown {
-    font-size: 0.7rem;
-    font-family: "Loadio-Regular";
+  font-size: 0.7rem;
+  font-family: 'Cadet';
+  font-style: normal;
+  font-weight: normal;
+  font-display: auto;
   }
   .dropdown-content a {
     width: auto;
