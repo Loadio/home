@@ -1,30 +1,26 @@
 @font-face {
   font-family: 'Loadio font light';
-  src: url(https://loadio.github.io/home/Fonts/FinalSix\%20Light.ttf);
+  src: url(/Fonts/Cadet-Light.otf);
 }
 @font-face {
   font-family: 'Loadio font medium';
-  src: url(https://loadio.github.io/home/Fonts/FinalSix\%20Medium.ttf);
+  src: url(/Fonts/Cadet-Medium.otf);
 }
 @font-face {
   font-family: 'Loadio font thin';
-  src: url(https://loadio.github.io/home/Fonts/FinalSix\%20Thin.ttf);
+  src: url(/Fonts/Cadet-Thin.otf);
 }
 @font-face {
-  font-family: 'Loadio font extra bold';
-  src: url(https://loadio.github.io/home/Fonts/FinalSix\%20ExtraBold.ttf);
-}
-@font-face {
-  font-family: 'Loadio font book';
-  src: url(https://loadio.github.io/home/Fonts/FinalSix\%20Book.ttf);
-}
-@font-face {
-  font-family: 'Loadio font heavy';
-  src: url(https://loadio.github.io/home/Fonts/FinalSix\%20Heavy.ttf);
+  font-family: 'Loadio font bold';
+  src: url(/Fonts/Cadet-Bold.otf);
 }
 @font-face {
   font-family: 'Loadio font black';
-  src: url(https://loadio.github.io/home/Fonts/FinalSix\%20Black.ttf);
+  src: url(/Fonts/Cadet-Black.otf);
+}
+@font-face {
+  font-family: 'Loadio font regular';
+  src: url(/Fonts/Cadet-Regular.otf);
 }
 
 
@@ -55,7 +51,7 @@ h2,
 h3,
 h4,
 h5 {
-  font-family: 'Loadio font heavy', 'Helvetica Neue', -apple-system,sans-serif, Arial, Helvetica;
+  font-family: 'Loadio font black', -apple-system,sans-serif, Arial, Helvetica;
   font-weight: 900;
   transition: var(--transition-responsive-items);
   font-size: 2rem;
@@ -63,7 +59,7 @@ h5 {
 p,
 input,
 div {
-  font-family: 'Loadio font light', 'Helvetica Neue', -apple-system,sans-serif, Arial, Helvetica;
+  font-family: 'Loadio font light', -apple-system,sans-serif, Arial, Helvetica;
   font-weight: 400;
   transition: var(--transition-responsive-items);
   text-decoration: none;
@@ -72,7 +68,7 @@ div {
 
 
 a, span{
-  font-family: 'Loadio font medium', 'Helvetica Neue', -apple-system,sans-serif, Arial, Helvetica;
+  font-family: 'Loadio font medium', -apple-system,sans-serif, Arial, Helvetica;
   font-weight: 500;
   transition: var(--transition-responsive-items);
   text-decoration: none;
