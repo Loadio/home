@@ -572,7 +572,6 @@ header .logo-img a svg {
   transition: ease-out 100ms;
   cursor: pointer;
   font-size: .8rem;
-  font-family: 'Cadet';
   font-style: normal;
   font-weight: normal;
   font-display: auto;
@@ -817,7 +816,6 @@ header .logo-img a svg {
   justify-content: center;
   justify-content: center;
   flex-direction: column;
-  font-family: 'Cadet';
   font-style: normal;
   font-weight: normal;
   font-display: auto;
