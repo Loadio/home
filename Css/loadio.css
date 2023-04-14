@@ -78,7 +78,7 @@ a, span{
 body {
   display: block;
   background-color: var(--background-color-Ld);
-  font-family: 'Intro font light', sans-serif, Arial, Helvetica;
+  font-family: -apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Helvetica Neue,Arial,Noto Sans,sans-serif
   font-weight: 500;
   position: relative !important;
   min-height: 0 !important; 
