@@ -1,5 +1,5 @@
 @font-face {
-	font-family: 'Cadet';
+	font-family: 'Cadet bold';
 	font-style: normal;
 	font-weight: bold;
 	font-display: auto;
@@ -7,7 +7,7 @@
 		   url('https://loadio.github.io/home/Fonts/Cadet-Bold.ttf') format('truetype');
 }
 @font-face {
-	font-family: 'Cadet';
+	font-family: 'Cadet regular';
 	font-style: normal;
 	font-weight: normal;
 	font-display: auto;
@@ -15,7 +15,7 @@
 		   url('https://loadio.github.io/home/Fonts/Cadet-Regular.ttf') format('truetype');
 }
 @font-face {
-	font-family: 'Cadet';
+	font-family: 'Cadet thin';
 	font-style: normal;
 	font-weight: 300;
 	font-display: auto;
@@ -50,7 +50,7 @@ h2,
 h3,
 h4,
 h5 {
-  font-family: 'Cadet';
+  font-family: 'Cadet bold';
 	font-style: normal;
 	font-weight: bold;
 	font-display: auto;
@@ -61,7 +61,7 @@ h5 {
 p,
 input,
 div {
-  font-family: 'Cadet';
+  font-family: 'Cadet thin';
 	font-style: normal;
 	font-weight: 300;
 	font-display: auto;
@@ -73,7 +73,7 @@ div {
 
 
 a, span{
-  font-family: 'Cadet';
+  font-family: 'Cadet regular';
 	font-style: normal;
 	font-weight: normal;
 	font-display: auto;
