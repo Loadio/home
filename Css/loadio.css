@@ -86,7 +86,7 @@ a, span{
 body {
   display: block;
   background-color: var(--background-color-Ld);
-  font-family: 'Cadet';
+  font-family: 'Cadet regular';
 	font-style: normal;
 	font-weight: normal;
 	font-display: auto;
@@ -1046,7 +1046,7 @@ footer {
   text-align: inherit;
   font-size: 1rem;
   line-height: 30px;
-  font-family: 'Cadet';
+  font-family: 'Cadet thin';
   font-style: normal;
   font-weight: normal;
   font-display: auto;
@@ -1104,7 +1104,7 @@ footer {
   text-align: inherit;
   font-size: 1rem;
   line-height: 25px;
-  font-family: 'Cadet';
+  font-family: 'Cadet thin';
   font-style: normal;
   font-weight: normal;
   font-display: auto;
