@@ -1730,7 +1730,7 @@ footer {
     flex-direction: column;
     gap: 5px;
   }
-  .support-loadio div:nth-child(1){
+  .support-loadio div{
     display: flex;
     justify-content: space-between;
     width: 90%;
@@ -2106,7 +2106,7 @@ footer {
     flex-direction: column;
     gap: 5px;
   }
-  .support-loadio div:nth-child(1){
+  .support-loadio div{
     display: flex;
     justify-content: space-between;
     width: 90%;
