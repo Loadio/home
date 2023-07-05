@@ -124,7 +124,7 @@ input:-internal-autofill-selected {
 .support-loadio span:nth-child(1){
   margin-left: 10%;
 }
-.support-loadio div{
+.support-loadio > div{
   display: contents;
 }
 .support-loadio a{
