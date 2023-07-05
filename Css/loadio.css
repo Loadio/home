@@ -108,6 +108,38 @@ input:-internal-autofill-selected {
 /*--------------------------
        Header
 --------------------------*/
+.support-loadio{
+  position: fixed;
+  bottom: 0;
+  background: var(--global-pallet-color-green-primary);
+  color: black;
+  z-index: 99999999;
+  width: 100%;
+  height: 50px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  left: 0;
+}
+.support-loadio span:nth-child(1){
+  margin-left: 10%;
+}
+.support-loadio div:nth-child(1){
+  display: contents;
+}
+.support-loadio a{
+  display: flex;
+  margin-right: var(--first-button-support-fixed-bar, 10%);
+  background: var(--global-pallet-color-black-secondary);
+  width: 20%;
+  height: 40px;
+  justify-content: center;
+  color: white;
+  align-items: center;
+  border-radius: var(--border-radius-bx);
+}
+
+
 header {
   width: 100%;
   height: 60px;
@@ -1689,6 +1721,32 @@ footer {
 }
 
 @media all and (min-width: 480px) and (max-width: 768px) {
+  .support-loadio{
+    width: 100%;
+    height: 70px;
+    display: flex;
+    align-items: center;
+    left: 0;
+    flex-direction: column;
+    gap: 5px;
+  }
+  .support-loadio div:nth-child(1){
+    display: flex;
+    justify-content: space-between;
+    width: 90%;
+    align-items: center;
+    padding: 0 20px;
+  }
+  .support-loadio span:nth-child(1){
+    margin-left: 0%;
+  }
+  .support-loadio span:nth-child(2){
+    margin: 0 10px;
+  }
+  .support-loadio a{
+    width: 60%;
+  }  
+  
   /*--------------------------
       Home page Responsive
 --------------------------*/
