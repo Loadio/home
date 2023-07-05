@@ -34,17 +34,19 @@
 <body>
   <!--Header loadio-->
 <section id="loadio-header-element">
-    <header>
+    <header> 
         <div class="Ldhome_itens-header_54094">
-          <div class="support-loadio" style="position: fixed;bottom: 0;background: var(--global-pallet-color-green-primary);color: black;z-index: 99999999;width: 100%;height: 50px;display: flex;justify-content: space-between;align-items: center;left: 0;">
-            <span style="margin-left: 10%;/* font-size: 1rem; */">Está tendo problemas no site? </span>
-            <a href="" onclick="enviarEmail()" style="display: flex;/* margin-right: 10%; */background: var(--global-pallet-color-black-secondary);width: 20%;height: 40px;justify-content: center;color: white;align-items: center;border-radius: var(--border-radius-bx);">Contato via E-mail</a>
+          <div class="support-loadio">
+            <span style="">Está tendo problemas no site? </span>
+            <div>
+            <a href="" onclick="enviarEmail()" style="--first-button-support-fixed-bar: 0%;">Contato via E-mail</a>
             <span>ou</span>
-            <a href="https://twitter.com/LoadioSupport" style="display: flex;margin-right: 10%;background: var(--global-pallet-color-black-secondary);width: 20%;height: 40px;justify-content: center;color: white;align-items: center;border-radius: var(--border-radius-bx);">Contato via Twitter</a></div>
+            <a href="https://twitter.com/LoadioSupport">Contato via Twitter</a></div>
+            </div>
             <script>
             function enviarEmail() {
               const destinatario = 'suporte.loadio@gmail.com';
-              const assunto = 'FeedBack Loadio: Error/Support.';
+              const assunto = 'FeedBack Loadio: Error/Support.'; 
               const corpo = '';
             
               const mailtoLink = `mailto:${destinatario}?subject=${encodeURIComponent(assunto)}&body=${encodeURIComponent(corpo)}`;
