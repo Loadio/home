@@ -12,7 +12,7 @@ var myWindow = window.open("", "");
     myWindow.document.write('</body></html>');
     setTimeout(function() {
         myWindow.close()
-    }, 1500)
+    }, 1000)
 }
 function downloadImage(url, name){
       fetch(url)
