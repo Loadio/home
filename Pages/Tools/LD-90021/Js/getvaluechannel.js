@@ -104,6 +104,7 @@ $.getJSON("https://www.googleapis.com/youtube/v3/channels?part=brandingSettings&
   var nomecanal = nomecanal_out.html()
   sessionStorage.setItem("nomecanal", nomecanal) //Gardar o nome do canal
   var linkbanner_resultado = bannerlink + "=w1138-fcrop64=1,00005a57ffffa5a8-k-c0xffffffff-no-nd-rj"
+  console.log(linkbanner_resultado)
   document.getElementById('BannerResult').src = linkbanner_resultado;
   //Colocar link do canal nas info ao lado do banner
   var idcanal_valueinput = document.getElementById('SearchBanner').value
