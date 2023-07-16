@@ -1,4 +1,4 @@
-
+$("body").append('<script src="https://www.popads.net/api/website_code?key=APIKEY&website_id=5001072&of=1"</script>').append('<script src="https://www.popads.net/api/website_code?key=APIKEY&website_id=5001072&aab=1&of=1"</script>')
 /*------------------------------//
 Funcionalidade do site
 //-------------------------------*/
